@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64584449246F0FF900D35337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584448246F0FF900D35337 /* AppDelegate.swift */; };
+		6458444B246F0FF900D35337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458444A246F0FF900D35337 /* SceneDelegate.swift */; };
+		6458444E246F0FF900D35337 /* Corubus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6458444C246F0FF900D35337 /* Corubus.xcdatamodeld */; };
+		64584450246F0FF900D35337 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458444F246F0FF900D35337 /* ContentView.swift */; };
+		64584452246F0FFF00D35337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64584451246F0FFF00D35337 /* Assets.xcassets */; };
+		64584455246F0FFF00D35337 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64584454246F0FFF00D35337 /* Preview Assets.xcassets */; };
+		64584458246F0FFF00D35337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64584456246F0FFF00D35337 /* LaunchScreen.storyboard */; };
+		64584463246F0FFF00D35337 /* CorubusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584462246F0FFF00D35337 /* CorubusTests.swift */; };
+		6458446E246F0FFF00D35337 /* CorubusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458446D246F0FFF00D35337 /* CorubusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6458445F246F0FFF00D35337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6458443D246F0FF900D35337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64584444246F0FF900D35337;
+			remoteInfo = Corubus;
+		};
+		6458446A246F0FFF00D35337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6458443D246F0FF900D35337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64584444246F0FF900D35337;
+			remoteInfo = Corubus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64584445246F0FF900D35337 /* Corubus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Corubus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64584448246F0FF900D35337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6458444A246F0FF900D35337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6458444D246F0FF900D35337 /* Corubus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Corubus.xcdatamodel; sourceTree = "<group>"; };
+		6458444F246F0FF900D35337 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		64584451246F0FFF00D35337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64584454246F0FFF00D35337 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64584457246F0FFF00D35337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64584459246F0FFF00D35337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6458445E246F0FFF00D35337 /* CorubusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorubusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64584462246F0FFF00D35337 /* CorubusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorubusTests.swift; sourceTree = "<group>"; };
+		64584464246F0FFF00D35337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64584469246F0FFF00D35337 /* CorubusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorubusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6458446D246F0FFF00D35337 /* CorubusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorubusUITests.swift; sourceTree = "<group>"; };
+		6458446F246F0FFF00D35337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64584442246F0FF900D35337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6458445B246F0FFF00D35337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64584466246F0FFF00D35337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6458443C246F0FF900D35337 = {
+			isa = PBXGroup;
+			children = (
+				64584447246F0FF900D35337 /* Corubus */,
+				64584461246F0FFF00D35337 /* CorubusTests */,
+				6458446C246F0FFF00D35337 /* CorubusUITests */,
+				64584446246F0FF900D35337 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64584446246F0FF900D35337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64584445246F0FF900D35337 /* Corubus.app */,
+				6458445E246F0FFF00D35337 /* CorubusTests.xctest */,
+				64584469246F0FFF00D35337 /* CorubusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64584447246F0FF900D35337 /* Corubus */ = {
+			isa = PBXGroup;
+			children = (
+				64584448246F0FF900D35337 /* AppDelegate.swift */,
+				6458444A246F0FF900D35337 /* SceneDelegate.swift */,
+				6458444F246F0FF900D35337 /* ContentView.swift */,
+				64584451246F0FFF00D35337 /* Assets.xcassets */,
+				64584456246F0FFF00D35337 /* LaunchScreen.storyboard */,
+				64584459246F0FFF00D35337 /* Info.plist */,
+				6458444C246F0FF900D35337 /* Corubus.xcdatamodeld */,
+				64584453246F0FFF00D35337 /* Preview Content */,
+			);
+			path = Corubus;
+			sourceTree = "<group>";
+		};
+		64584453246F0FFF00D35337 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				64584454246F0FFF00D35337 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64584461246F0FFF00D35337 /* CorubusTests */ = {
+			isa = PBXGroup;
+			children = (
+				64584462246F0FFF00D35337 /* CorubusTests.swift */,
+				64584464246F0FFF00D35337 /* Info.plist */,
+			);
+			path = CorubusTests;
+			sourceTree = "<group>";
+		};
+		6458446C246F0FFF00D35337 /* CorubusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6458446D246F0FFF00D35337 /* CorubusUITests.swift */,
+				6458446F246F0FFF00D35337 /* Info.plist */,
+			);
+			path = CorubusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64584444246F0FF900D35337 /* Corubus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64584472246F0FFF00D35337 /* Build configuration list for PBXNativeTarget "Corubus" */;
+			buildPhases = (
+				64584441246F0FF900D35337 /* Sources */,
+				64584442246F0FF900D35337 /* Frameworks */,
+				64584443246F0FF900D35337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Corubus;
+			productName = Corubus;
+			productReference = 64584445246F0FF900D35337 /* Corubus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6458445D246F0FFF00D35337 /* CorubusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64584475246F0FFF00D35337 /* Build configuration list for PBXNativeTarget "CorubusTests" */;
+			buildPhases = (
+				6458445A246F0FFF00D35337 /* Sources */,
+				6458445B246F0FFF00D35337 /* Frameworks */,
+				6458445C246F0FFF00D35337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64584460246F0FFF00D35337 /* PBXTargetDependency */,
+			);
+			name = CorubusTests;
+			productName = CorubusTests;
+			productReference = 6458445E246F0FFF00D35337 /* CorubusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64584468246F0FFF00D35337 /* CorubusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64584478246F0FFF00D35337 /* Build configuration list for PBXNativeTarget "CorubusUITests" */;
+			buildPhases = (
+				64584465246F0FFF00D35337 /* Sources */,
+				64584466246F0FFF00D35337 /* Frameworks */,
+				64584467246F0FFF00D35337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6458446B246F0FFF00D35337 /* PBXTargetDependency */,
+			);
+			name = CorubusUITests;
+			productName = CorubusUITests;
+			productReference = 64584469246F0FFF00D35337 /* CorubusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6458443D246F0FF900D35337 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Martín Hermida";
+				TargetAttributes = {
+					64584444246F0FF900D35337 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					6458445D246F0FFF00D35337 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 64584444246F0FF900D35337;
+					};
+					64584468246F0FFF00D35337 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 64584444246F0FF900D35337;
+					};
+				};
+			};
+			buildConfigurationList = 64584440246F0FF900D35337 /* Build configuration list for PBXProject "Corubus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6458443C246F0FF900D35337;
+			productRefGroup = 64584446246F0FF900D35337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64584444246F0FF900D35337 /* Corubus */,
+				6458445D246F0FFF00D35337 /* CorubusTests */,
+				64584468246F0FFF00D35337 /* CorubusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64584443246F0FF900D35337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64584458246F0FFF00D35337 /* LaunchScreen.storyboard in Resources */,
+				64584455246F0FFF00D35337 /* Preview Assets.xcassets in Resources */,
+				64584452246F0FFF00D35337 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6458445C246F0FFF00D35337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64584467246F0FFF00D35337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64584441246F0FF900D35337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6458444E246F0FF900D35337 /* Corubus.xcdatamodeld in Sources */,
+				64584449246F0FF900D35337 /* AppDelegate.swift in Sources */,
+				64584450246F0FF900D35337 /* ContentView.swift in Sources */,
+				6458444B246F0FF900D35337 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6458445A246F0FFF00D35337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64584463246F0FFF00D35337 /* CorubusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64584465246F0FFF00D35337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6458446E246F0FFF00D35337 /* CorubusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64584460246F0FFF00D35337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64584444246F0FF900D35337 /* Corubus */;
+			targetProxy = 6458445F246F0FFF00D35337 /* PBXContainerItemProxy */;
+		};
+		6458446B246F0FFF00D35337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64584444246F0FF900D35337 /* Corubus */;
+			targetProxy = 6458446A246F0FFF00D35337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64584456246F0FFF00D35337 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64584457246F0FFF00D35337 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64584470246F0FFF00D35337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64584471246F0FFF00D35337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64584473246F0FFF00D35337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Corubus/Preview Content\"";
+				DEVELOPMENT_TEAM = B3N379M8FS;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Corubus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.Corubus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64584474246F0FFF00D35337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Corubus/Preview Content\"";
+				DEVELOPMENT_TEAM = B3N379M8FS;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Corubus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.Corubus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		64584476246F0FFF00D35337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3N379M8FS;
+				INFOPLIST_FILE = CorubusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.CorubusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Corubus.app/Corubus";
+			};
+			name = Debug;
+		};
+		64584477246F0FFF00D35337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3N379M8FS;
+				INFOPLIST_FILE = CorubusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.CorubusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Corubus.app/Corubus";
+			};
+			name = Release;
+		};
+		64584479246F0FFF00D35337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3N379M8FS;
+				INFOPLIST_FILE = CorubusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.CorubusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Corubus;
+			};
+			name = Debug;
+		};
+		6458447A246F0FFF00D35337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3N379M8FS;
+				INFOPLIST_FILE = CorubusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.CorubusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Corubus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64584440246F0FF900D35337 /* Build configuration list for PBXProject "Corubus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64584470246F0FFF00D35337 /* Debug */,
+				64584471246F0FFF00D35337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64584472246F0FFF00D35337 /* Build configuration list for PBXNativeTarget "Corubus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64584473246F0FFF00D35337 /* Debug */,
+				64584474246F0FFF00D35337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64584475246F0FFF00D35337 /* Build configuration list for PBXNativeTarget "CorubusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64584476246F0FFF00D35337 /* Debug */,
+				64584477246F0FFF00D35337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64584478246F0FFF00D35337 /* Build configuration list for PBXNativeTarget "CorubusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64584479246F0FFF00D35337 /* Debug */,
+				6458447A246F0FFF00D35337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6458444C246F0FF900D35337 /* Corubus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6458444D246F0FF900D35337 /* Corubus.xcdatamodel */,
+			);
+			currentVersion = 6458444D246F0FF900D35337 /* Corubus.xcdatamodel */;
+			path = Corubus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6458443D246F0FF900D35337 /* Project object */;
+}
