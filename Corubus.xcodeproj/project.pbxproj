@@ -3,19 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642BCF9D246F268E00B5AA79 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BCF9C246F268E00B5AA79 /* Favorites.swift */; };
+		642BCF9F246F288800B5AA79 /* Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BCF9E246F288800B5AA79 /* Lines.swift */; };
+		642BCFA2246F2E9D00B5AA79 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BCFA1246F2E9D00B5AA79 /* AppState.swift */; };
+		642BCFA52470CD5300B5AA79 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BCFA42470CD5300B5AA79 /* Line.swift */; };
 		64584449246F0FF900D35337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584448246F0FF900D35337 /* AppDelegate.swift */; };
 		6458444B246F0FF900D35337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458444A246F0FF900D35337 /* SceneDelegate.swift */; };
-		6458444E246F0FF900D35337 /* Corubus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6458444C246F0FF900D35337 /* Corubus.xcdatamodeld */; };
 		64584450246F0FF900D35337 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458444F246F0FF900D35337 /* ContentView.swift */; };
 		64584452246F0FFF00D35337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64584451246F0FFF00D35337 /* Assets.xcassets */; };
 		64584455246F0FFF00D35337 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64584454246F0FFF00D35337 /* Preview Assets.xcassets */; };
 		64584458246F0FFF00D35337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64584456246F0FFF00D35337 /* LaunchScreen.storyboard */; };
 		64584463246F0FFF00D35337 /* CorubusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584462246F0FFF00D35337 /* CorubusTests.swift */; };
 		6458446E246F0FFF00D35337 /* CorubusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458446D246F0FFF00D35337 /* CorubusUITests.swift */; };
+		64584481246F14F900D35337 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64584483246F14F900D35337 /* Localizable.strings */; };
+		647DA4152470D67900490764 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 647DA4142470D67900490764 /* SwiftyJSON */; };
+		647DA418247195FB00490764 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA417247195FB00490764 /* ActivityIndicator.swift */; };
+		647DA41A2471BD4500490764 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA4192471BD4500490764 /* LineItem.swift */; };
+		647DA41D2471C21900490764 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA41C2471C21900490764 /* Color.swift */; };
+		647DA41F2471CFB300490764 /* LineDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA41E2471CFB300490764 /* LineDetails.swift */; };
+		647DA4212471E60600490764 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA4202471E60600490764 /* Stop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		642BCF9C246F268E00B5AA79 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		642BCF9E246F288800B5AA79 /* Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lines.swift; sourceTree = "<group>"; };
+		642BCFA1246F2E9D00B5AA79 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		642BCFA42470CD5300B5AA79 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		64584445246F0FF900D35337 /* Corubus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Corubus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64584448246F0FF900D35337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6458444A246F0FF900D35337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6458444D246F0FF900D35337 /* Corubus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Corubus.xcdatamodel; sourceTree = "<group>"; };
 		6458444F246F0FF900D35337 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64584451246F0FFF00D35337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64584454246F0FFF00D35337 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,6 +64,13 @@
 		64584469246F0FFF00D35337 /* CorubusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorubusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6458446D246F0FFF00D35337 /* CorubusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorubusUITests.swift; sourceTree = "<group>"; };
 		6458446F246F0FFF00D35337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64584482246F14F900D35337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		64584484246F151600D35337 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		647DA417247195FB00490764 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		647DA4192471BD4500490764 /* LineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		647DA41C2471C21900490764 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		647DA41E2471CFB300490764 /* LineDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetails.swift; sourceTree = "<group>"; };
+		647DA4202471E60600490764 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647DA4152470D67900490764 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		642BCFA0246F2E0200B5AA79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				642BCFA1246F2E9D00B5AA79 /* AppState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		642BCFA32470CD4300B5AA79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				642BCFA42470CD5300B5AA79 /* Line.swift */,
+				647DA4202471E60600490764 /* Stop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6458443C246F0FF900D35337 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +139,17 @@
 		64584447246F0FF900D35337 /* Corubus */ = {
 			isa = PBXGroup;
 			children = (
+				647DA41B2471C20D00490764 /* Utils */,
+				642BCFA32470CD4300B5AA79 /* Model */,
+				642BCFA0246F2E0200B5AA79 /* ViewModel */,
+				6458447D246F118000D35337 /* View */,
 				64584448246F0FF900D35337 /* AppDelegate.swift */,
 				6458444A246F0FF900D35337 /* SceneDelegate.swift */,
-				6458444F246F0FF900D35337 /* ContentView.swift */,
 				64584451246F0FFF00D35337 /* Assets.xcassets */,
 				64584456246F0FFF00D35337 /* LaunchScreen.storyboard */,
 				64584459246F0FFF00D35337 /* Info.plist */,
-				6458444C246F0FF900D35337 /* Corubus.xcdatamodeld */,
 				64584453246F0FFF00D35337 /* Preview Content */,
+				64584483246F14F900D35337 /* Localizable.strings */,
 			);
 			path = Corubus;
 			sourceTree = "<group>";
@@ -139,6 +180,35 @@
 			path = CorubusUITests;
 			sourceTree = "<group>";
 		};
+		6458447D246F118000D35337 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				647DA416247195EC00490764 /* Components */,
+				6458444F246F0FF900D35337 /* ContentView.swift */,
+				642BCF9C246F268E00B5AA79 /* Favorites.swift */,
+				642BCF9E246F288800B5AA79 /* Lines.swift */,
+				647DA41E2471CFB300490764 /* LineDetails.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		647DA416247195EC00490764 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				647DA417247195FB00490764 /* ActivityIndicator.swift */,
+				647DA4192471BD4500490764 /* LineItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		647DA41B2471C20D00490764 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				647DA41C2471C21900490764 /* Color.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +225,9 @@
 			dependencies = (
 			);
 			name = Corubus;
+			packageProductDependencies = (
+				647DA4142470D67900490764 /* SwiftyJSON */,
+			);
 			productName = Corubus;
 			productReference = 64584445246F0FF900D35337 /* Corubus.app */;
 			productType = "com.apple.product-type.application";
@@ -225,8 +298,12 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 6458443C246F0FF900D35337;
+			packageReferences = (
+				647DA4132470D67900490764 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 64584446246F0FF900D35337 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64584458246F0FFF00D35337 /* LaunchScreen.storyboard in Resources */,
+				64584481246F14F900D35337 /* Localizable.strings in Resources */,
 				64584455246F0FFF00D35337 /* Preview Assets.xcassets in Resources */,
 				64584452246F0FFF00D35337 /* Assets.xcassets in Resources */,
 			);
@@ -270,10 +348,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6458444E246F0FF900D35337 /* Corubus.xcdatamodeld in Sources */,
+				642BCFA2246F2E9D00B5AA79 /* AppState.swift in Sources */,
+				647DA41D2471C21900490764 /* Color.swift in Sources */,
+				647DA41F2471CFB300490764 /* LineDetails.swift in Sources */,
 				64584449246F0FF900D35337 /* AppDelegate.swift in Sources */,
 				64584450246F0FF900D35337 /* ContentView.swift in Sources */,
+				642BCF9D246F268E00B5AA79 /* Favorites.swift in Sources */,
+				642BCFA52470CD5300B5AA79 /* Line.swift in Sources */,
+				647DA4212471E60600490764 /* Stop.swift in Sources */,
+				647DA41A2471BD4500490764 /* LineItem.swift in Sources */,
 				6458444B246F0FF900D35337 /* SceneDelegate.swift in Sources */,
+				647DA418247195FB00490764 /* ActivityIndicator.swift in Sources */,
+				642BCF9F246F288800B5AA79 /* Lines.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +403,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		64584483246F14F900D35337 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64584482246F14F900D35337 /* en */,
+				64584484246F151600D35337 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -324,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -370,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -384,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -424,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -447,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.Corubus;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.martinhermida.corubus-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.martinhermida.Corubus;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.martinhermida.corubus-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,18 +696,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		6458444C246F0FF900D35337 /* Corubus.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6458444D246F0FF900D35337 /* Corubus.xcdatamodel */,
-			);
-			currentVersion = 6458444D246F0FF900D35337 /* Corubus.xcdatamodel */;
-			path = Corubus.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		647DA4132470D67900490764 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		647DA4142470D67900490764 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 647DA4132470D67900490764 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6458443D246F0FF900D35337 /* Project object */;
 }
