@@ -1,1 +1,5 @@
-
+"tabs.favorites" = "Favoritos";
+"tabs.stops" = "Paradas";
+"tabs.lines" = "Líneas";
+"lineDetailsSection.journey" = "Recorrido";
+"lineDetailsSection.timetable" = "Horarios";

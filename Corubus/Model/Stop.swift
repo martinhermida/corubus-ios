@@ -2,7 +2,7 @@ import Foundation
 import CoreData
 import SwiftyJSON
 
-class Stop: Codable {
+class Stop: Codable, Identifiable {
     var id: Int
     var name: String
     var longitude: Float
@@ -14,6 +14,7 @@ class Stop: Codable {
         self.name = json["nombre"].string!
         self.longitude = json["posx"].float!
         self.latitude = json["posy"].float!
+        self.connectionIds = json["enlaces"].arrayValue.map { $0.intValue }
     }
     
     func setFromJSON(json: JSON) {
