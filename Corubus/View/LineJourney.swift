@@ -5,12 +5,14 @@ struct LineJourney: View {
     @EnvironmentObject var appState: AppState
     var line: Line
     var returnJourney: Bool
+    var stopsWithBuses: Set<Int>
 
     func renderStopItem(stopId: Int, isFirst: Bool, isLast: Bool, index: Int) -> some View {
         let stop = appState.stops[stopId]!
 
         return HStack {
-            JourneyGraph(line: line, isFirst: isFirst, isLast: isLast, index: index)
+            JourneyGraph(line: line, isFirst: isFirst, isLast: isLast, index: index, isBusInStop: stopsWithBuses.contains(stopId))
+                .animation(.default)
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(stop.name)

@@ -56,7 +56,7 @@ class AppState: ObservableObject {
         var lines: [Int: Line] = [:]
         var orderedLines: [Line] = []
 
-        let url = URL(string: "https://itranvias.com/queryitr_v3.php?&dato=20160101T000000_gl_0_20160101T000000&func=7")!
+        let url = URL(string: "https://itranvias.com/queryitr_v3.php?dato=20160101T000000_gl_0_20160101T000000&func=7")!
         URLSession.shared.dataTask(with: url) { (data, res, error) in
             guard let json = try? JSON(data: data!) else { return }
             

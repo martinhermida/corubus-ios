@@ -3,6 +3,8 @@ import SwiftUI
 struct LineDetails: View {
     @State private var section = "journey"
     @State private var returnJourney = false
+    @State private var busesData: [Set<Int>] = [[], []]
+    @State private var timer: Timer?
     let tabs = [NSLocalizedString("lineDetailsSection.journey", comment: ""), NSLocalizedString("lineDetailsSection.timetable", comment: "")]
     var line: Line
 
@@ -17,7 +19,7 @@ struct LineDetails: View {
     var body: some View {
         VStack(spacing: 0) {
             if section == "journey" {
-                LineJourney(line: line, returnJourney: returnJourney)
+                LineJourney(line: line, returnJourney: returnJourney, stopsWithBuses: busesData[returnJourney ? 1 : 0])
             } else {
                 Spacer()
             }
@@ -26,5 +28,13 @@ struct LineDetails: View {
         }
         .navigationBarItems(trailing: Header)
         .navigationBarTitle("", displayMode: .inline)
+        .onAppear(perform: {
+            self.timer = self.line.pollBuses() { stopsWithBuses in
+                self.busesData = stopsWithBuses
+            }
+        })
+        .onDisappear(perform: {
+            self.timer?.invalidate()
+        })
     }
 }

@@ -36,6 +36,7 @@
 		64A1420C2478447F00F07715 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420B2478447F00F07715 /* RoundedCorners.swift */; };
 		64A1420E24784DF700F07715 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420D24784DF700F07715 /* GeometryGetter.swift */; };
 		64A142102478519800F07715 /* JourneyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420F2478519800F07715 /* JourneyGraph.swift */; };
+		64A142122478905800F07715 /* NetworkBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A142112478905800F07715 /* NetworkBroker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		64A1420B2478447F00F07715 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		64A1420D24784DF700F07715 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		64A1420F2478519800F07715 /* JourneyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyGraph.swift; sourceTree = "<group>"; };
+		64A142112478905800F07715 /* NetworkBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBroker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			children = (
 				647DA41C2471C21900490764 /* Color.swift */,
 				6419DFC22475A77600567755 /* ViewControllerResolver.swift */,
+				64A142112478905800F07715 /* NetworkBroker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				6419DFC62475CB9500567755 /* Blur.swift in Sources */,
 				6419DFC12475A6B400567755 /* SearchBar.swift in Sources */,
 				642BCFA2246F2E9D00B5AA79 /* AppState.swift in Sources */,
+				64A142122478905800F07715 /* NetworkBroker.swift in Sources */,
 				647DA41D2471C21900490764 /* Color.swift in Sources */,
 				6419DFD02475DF0900567755 /* DirectionSelector.swift in Sources */,
 				647DA41F2471CFB300490764 /* LineDetails.swift in Sources */,
