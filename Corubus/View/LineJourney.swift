@@ -25,10 +25,6 @@ struct LineJourney: View {
         .padding(.vertical, 4)
     }
 
-    func foo() -> Int {
-        return 0
-    }
-
     var body: some View {
         let stops = returnJourney ? line.returnJourneyStopIds : line.outwardsJourneyStopIds
 

@@ -33,6 +33,7 @@
 		647DA41D2471C21900490764 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA41C2471C21900490764 /* Color.swift */; };
 		647DA41F2471CFB300490764 /* LineDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA41E2471CFB300490764 /* LineDetails.swift */; };
 		647DA4212471E60600490764 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA4202471E60600490764 /* Stop.swift */; };
+		64994BFA24818D2600AEEB5D /* LineTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64994BF924818D2600AEEB5D /* LineTimetable.swift */; };
 		64A1420C2478447F00F07715 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420B2478447F00F07715 /* RoundedCorners.swift */; };
 		64A1420E24784DF700F07715 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420D24784DF700F07715 /* GeometryGetter.swift */; };
 		64A142102478519800F07715 /* JourneyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420F2478519800F07715 /* JourneyGraph.swift */; };
@@ -89,6 +90,7 @@
 		647DA41C2471C21900490764 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		647DA41E2471CFB300490764 /* LineDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetails.swift; sourceTree = "<group>"; };
 		647DA4202471E60600490764 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		64994BF924818D2600AEEB5D /* LineTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTimetable.swift; sourceTree = "<group>"; };
 		64A1420B2478447F00F07715 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		64A1420D24784DF700F07715 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		64A1420F2478519800F07715 /* JourneyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyGraph.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				642BCF9E246F288800B5AA79 /* Lines.swift */,
 				647DA41E2471CFB300490764 /* LineDetails.swift */,
 				6419DFCD2475DE3500567755 /* LineJourney.swift */,
+				64994BF924818D2600AEEB5D /* LineTimetable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				647DA41A2471BD4500490764 /* LineItem.swift in Sources */,
 				6419DFC32475A77600567755 /* ViewControllerResolver.swift in Sources */,
 				6458444B246F0FF900D35337 /* SceneDelegate.swift in Sources */,
+				64994BFA24818D2600AEEB5D /* LineTimetable.swift in Sources */,
 				647DA418247195FB00490764 /* ActivityIndicator.swift in Sources */,
 				642BCF9F246F288800B5AA79 /* Lines.swift in Sources */,
 			);

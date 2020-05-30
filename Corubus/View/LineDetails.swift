@@ -4,6 +4,7 @@ struct LineDetails: View {
     @State private var section = "journey"
     @State private var returnJourney = false
     @State private var busesData: [Set<Int>] = [[], []]
+    @State private var timetable = [[String: [String]]](repeating: [:], count: 2)
     @State private var timer: Timer?
     let tabs = [NSLocalizedString("lineDetailsSection.journey", comment: ""), NSLocalizedString("lineDetailsSection.timetable", comment: "")]
     var line: Line
@@ -21,7 +22,7 @@ struct LineDetails: View {
             if section == "journey" {
                 LineJourney(line: line, returnJourney: returnJourney, stopsWithBuses: busesData[returnJourney ? 1 : 0])
             } else {
-                Spacer()
+                LineTimetable(timetable: timetable[returnJourney ? 1 : 0])
             }
 
             DirectionSelector(line: line, returnJourney: self.$returnJourney)
@@ -31,6 +32,9 @@ struct LineDetails: View {
         .onAppear(perform: {
             self.timer = self.line.pollBuses() { stopsWithBuses in
                 self.busesData = stopsWithBuses
+            }
+            self.line.getTimetable() { timetable in
+                self.timetable = timetable
             }
         })
         .onDisappear(perform: {
