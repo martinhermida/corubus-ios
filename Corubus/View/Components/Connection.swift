@@ -36,6 +36,10 @@ struct Connections: View {
         self.expanded = expanded
     }
 
+    func getConnectedLines() -> [Line] {
+        return stop.connectionIds.map { appState.lines[$0]! }
+    }
+
     func renderConnection(stop: Stop, columns: Int, row: Int, column: Int) -> some View {
         let connectionIndex = (row * columns) + column
 
@@ -47,19 +51,15 @@ struct Connections: View {
     }
 
     func renderCollapsed() -> some View {
-        ForEach(0 ..< self.rows, id: \.self) { row in
-            HStack(spacing: 0) {
-                ForEach(0 ..< self.columns, id: \.self) { column in
-                    self.renderConnection(stop: self.stop, columns: self.columns, row: row, column: column)
-                }
-            }
+        Wrap(getConnectedLines(), id: \.id) { line in
+            Connection(line: line)
         }
     }
 
     func renderExpanded() -> some View {
-        ForEach(stop.connectionIds, id: \.self) { connectionId in
+        ForEach(getConnectedLines()) { line in
             HStack {
-                Connection(line: self.appState.lines[connectionId]!)
+                Connection(line: line)
                 Text("")
             }
         }
