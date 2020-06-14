@@ -1,11 +1,3 @@
-//
-//  LineNumber.swift
-//  Corubus
-//
-//  Created by Martín Hermida on 21/05/2020.
-//  Copyright © 2020 Martín Hermida. All rights reserved.
-//
-
 import SwiftUI
 
 struct LineNumber: View {

@@ -11,8 +11,6 @@ struct Lines: View {
                 } else {
                     List(self.appState.orderedLines) { line in
                         LineItem(line: line)
-                    }.onAppear {
-                        UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 70, bottom: 0, right: 0)
                     }
                 }
             }

@@ -1,5 +1,12 @@
 "tabs.favorites" = "Favorites";
 "tabs.stops" = "Stops";
 "tabs.lines" = "Lines";
+"stops.searchPlaceholder" = "Search by stop name or number";
+"stops.nearby" = "Nearby";
+"stops.nearbyPlaceholder" = "Enable location to see the nearest bus stops.";
+"stops.nearbySettings" = "Check your location permissions in the Settings app.";
+"stops.history" = "Recently searched";
+"stops.historyPlaceholder" = "The stops you search will appear here.";
 "lineDetailsSection.journey" = "Journey";
 "lineDetailsSection.timetable" = "Timetable";
+"enableLocation" = "Enable location";

@@ -1,5 +1,12 @@
 "tabs.favorites" = "Favoritos";
 "tabs.stops" = "Paradas";
 "tabs.lines" = "Líneas";
+"stops.searchPlaceholder" = "Busca nombre o número de parada";
+"stops.nearby" = "Cercanas";
+"stops.nearbyPlaceholder" = "Activa la ubicación para ver las paradas más cercanas.";
+"stops.nearbySettings" = "Comprueba los permisos de ubicación en la aplicación Ajustes.";
+"stops.history" = "Buscadas recientemente";
+"stops.historyPlaceholder" = "Las paradas que busques irán apareciendo aquí.";
 "lineDetailsSection.journey" = "Recorrido";
 "lineDetailsSection.timetable" = "Horarios";
+"enableLocation" = "Activar ubicación";

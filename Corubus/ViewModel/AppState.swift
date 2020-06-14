@@ -8,6 +8,7 @@ struct AppStateCore: Codable {
     var stops: [Int: Stop]
     var lines: [Int: Line]
     var orderedLines: [Line]
+    var searchHistory: [Int]
 }
 
 class AppState: ObservableObject {
@@ -15,6 +16,7 @@ class AppState: ObservableObject {
     @Published var stops: [Int: Stop] = [:]
     @Published var lines: [Int: Line] = [:]
     @Published var orderedLines: [Line] = []
+    @Published var searchHistory: [Int] = []
     
     init() {
         self.load()
@@ -34,11 +36,12 @@ class AppState: ObservableObject {
         self.stops = appState.stops
         self.lines = appState.lines
         self.orderedLines = appState.orderedLines
+        self.searchHistory = appState.searchHistory
         self.linesLoading = false
     }
     
     public func save() {
-        let core = AppStateCore(linesLoading: self.linesLoading, stops: self.stops, lines: self.lines, orderedLines: self.orderedLines)
+        let core = AppStateCore(linesLoading: self.linesLoading, stops: self.stops, lines: self.lines, orderedLines: self.orderedLines, searchHistory: self.searchHistory)
         guard let encoded = try? JSONEncoder().encode(core) else { return }
         
         let saveDir = AppState.getSaveDir()
