@@ -24,6 +24,27 @@ class Stop: Codable, Identifiable {
         self.latitude = json["posy"].doubleValue
     }
 
+    func getLinesETAs(completionHandler: @escaping ([Int: [String]]) -> Void) {
+        let url = "https://itranvias.com/queryitr_v3.php?dato=\(self.id)&func=0"
+        NetworkBroker.get(url) { json in
+            let etas: [Int: [String]] = json["buses"]["lineas"].arrayValue.reduce(into: [:]) { acc, lineData in
+                let lineId = lineData["linea"].intValue
+                let etas = lineData["buses"].arrayValue.map { $0["tiempo"].stringValue }
+                acc[lineId] = etas
+            }
+
+            completionHandler(etas)
+        }
+    }
+
+    func pollLinesETAs(completionHandler: @escaping ([Int: [String]]) -> Void) -> Timer {
+        let timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { timer in
+            self.getLinesETAs(completionHandler: completionHandler)
+        }
+        timer.fire()
+        return timer
+    }
+
     static func getClosestStops(_ stops: [Int: Stop], _ location: CLLocation?) -> ArraySlice<Stop> {
         if let location = location {
             return stops.values.sorted(by: {

@@ -7,6 +7,7 @@
 "stops.nearbySettings" = "Check your location permissions in the Settings app.";
 "stops.history" = "Recently searched";
 "stops.historyPlaceholder" = "The stops you search will appear here.";
+"stops.noBuses" = "No buses coming";
 "lineDetailsSection.journey" = "Journey";
 "lineDetailsSection.timetable" = "Timetable";
 "enableLocation" = "Enable location";

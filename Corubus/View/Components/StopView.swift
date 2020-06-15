@@ -8,6 +8,14 @@ struct StopView: View {
     var collapsed: Collapse = .semiexpanded
     var addableToHistory: Bool = false
     @State var currentCollapsed: Collapse?
+    @State var linesETAs = [Int: [String]]()
+    @State private var timer: Timer?
+
+    func pollLinesETAs() {
+        self.timer = self.stop.pollLinesETAs { linesETAs in
+            self.linesETAs = linesETAs
+        }
+    }
 
     func onTap() {
         if (addableToHistory) {
@@ -19,8 +27,15 @@ struct StopView: View {
 
         if (currentCollapsed == Collapse.expanded) {
             self.currentCollapsed = collapsed
+            if collapsed == Collapse.collapsed {
+                self.timer?.invalidate()
+                self.timer = nil
+            }
         } else {
             self.currentCollapsed = Collapse.expanded
+            if self.timer == nil {
+                self.pollLinesETAs()
+            }
         }
     }
 
@@ -44,12 +59,20 @@ struct StopView: View {
                     }
 
                     if (currentCollapsed ?? collapsed) != .collapsed {
-                        Connections(stop: stop, leftMargin: 0, expanded: (currentCollapsed ?? collapsed) == .expanded)
+                        Connections(stop: stop, leftMargin: 0, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)
                             .padding(.bottom, 4)
                     }
                 }
             }
-            .padding(.vertical, 6)
+        }
+        .padding(.vertical, 6)
+        .onAppear {
+            if (self.currentCollapsed ?? self.collapsed) != .collapsed {
+                self.pollLinesETAs()
+            }
+        }
+        .onDisappear {
+            self.timer?.invalidate()
         }
     }
 }

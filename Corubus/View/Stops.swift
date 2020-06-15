@@ -14,7 +14,7 @@ struct Stops: View {
 
     var sectionList: some View {
         Group {
-            Section(header: Text("stops.nearby").font(Font.body.smallCaps()).fontWeight(.semibold)) {
+            Section(header: ListSectionHeader(text: "stops.nearby")) {
                 if locationManager.locationStatus != CLAuthorizationStatus.authorizedAlways && locationManager.locationStatus != CLAuthorizationStatus.authorizedWhenInUse {
                     VStack(alignment: .center) {
                         if locationManager.locationStatus == CLAuthorizationStatus.notDetermined {
@@ -30,7 +30,7 @@ struct Stops: View {
                     }
                 }
             }
-            Section(header: Text("stops.history").font(Font.body.smallCaps()).fontWeight(.semibold)) {
+            Section(header: ListSectionHeader(text: "stops.history")) {
                 if appState.searchHistory.count == 0 {
                     VStack(alignment: .center) {
                         Text("stops.historyPlaceholder")

@@ -18,7 +18,7 @@ struct LineJourney: View {
                 Text(stop.name)
                     .font(.subheadline)
                     .fixedSize(horizontal: false, vertical: true)
-                Connections(stop: stop, leftMargin: LineJourney.graphWidth, expanded: false)
+                Connections(stop: stop, leftMargin: LineJourney.graphWidth, expanded: false, linesETAs: nil)
                     .padding(.bottom, 4)
             }
         }
