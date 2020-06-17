@@ -26,7 +26,7 @@ struct Stops: View {
                     .frame(maxWidth: .infinity, idealHeight: 115)
                 } else {
                     ForEach(Stop.getClosestStops(appState.stops, locationManager.lastLocation)) { stop in
-                        StopView(stop: stop)
+                        StopView(stop: stop, autoFetch: true)
                     }
                 }
             }

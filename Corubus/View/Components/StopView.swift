@@ -6,9 +6,10 @@ struct StopView: View {
     @EnvironmentObject var appState: AppState
     var stop: Stop
     var collapsed: Collapse = .semiexpanded
-    var addableToHistory: Bool = false
+    var addableToHistory = false
+    var autoFetch = false
     @State var currentCollapsed: Collapse?
-    @State var linesETAs = [Int: [String]]()
+    @State var linesETAs: [Int: [String]]?
     @State private var timer: Timer?
 
     func pollLinesETAs() {
@@ -30,6 +31,7 @@ struct StopView: View {
             if collapsed == Collapse.collapsed {
                 self.timer?.invalidate()
                 self.timer = nil
+                self.linesETAs = nil
             }
         } else {
             self.currentCollapsed = Collapse.expanded
@@ -59,7 +61,7 @@ struct StopView: View {
                     }
 
                     if (currentCollapsed ?? collapsed) != .collapsed {
-                        Connections(stop: stop, leftMargin: 0, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)
+                        Connections(stop: stop, leftMargin: 70, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)
                             .padding(.bottom, 4)
                     }
                 }
@@ -67,7 +69,7 @@ struct StopView: View {
         }
         .padding(.vertical, 6)
         .onAppear {
-            if (self.currentCollapsed ?? self.collapsed) != .collapsed {
+            if self.autoFetch && (self.currentCollapsed ?? self.collapsed) != .collapsed {
                 self.pollLinesETAs()
             }
         }
