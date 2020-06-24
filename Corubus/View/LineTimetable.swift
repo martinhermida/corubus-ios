@@ -4,7 +4,7 @@ struct LineTimetable: View {
     var timetable: [String: [String]]
 
     var body: some View {
-        return List(Array(self.timetable).sorted(by: { Int($0.0)! < Int($1.0)! }), id: \.self.0) { hourKey, hours in
+        List(Array(self.timetable).sorted(by: { Int($0.0)! < Int($1.0)! }), id: \.self.0) { hourKey, hours in
             Text(hourKey)
                 .font(.subheadline)
                 .fontWeight(.bold)

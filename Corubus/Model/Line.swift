@@ -29,6 +29,10 @@ class Line: Codable, Identifiable {
             let minutes = hour.suffix(2)
             hour.removeLast(2)
 
+            if hour == "" {
+                hour = "0"
+            }
+
             if times[hour] == nil {
                 times[hour] = []
             }

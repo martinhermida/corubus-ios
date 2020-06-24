@@ -87,32 +87,50 @@ struct Connections: View {
     }
 
     func renderCollapsed() -> some View {
-        ForEach(0 ..< self.connectionsRows, id: \.self) { row in
-            HStack(spacing: 0) {
-                ForEach(0 ..< self.connectionsColumns, id: \.self) { column in
-                    self.renderConnection(stop: self.stop, row: row, column: column)
+        Group {
+            if stop.connectionIds.count > 0 {
+                ForEach(0 ..< self.connectionsRows, id: \.self) { row in
+                    HStack(spacing: 0) {
+                        ForEach(0 ..< self.connectionsColumns, id: \.self) { column in
+                            self.renderConnection(stop: self.stop, row: row, column: column)
+                        }
+                    }
                 }
+            } else {
+                Text("stops.noLines")
+                    .font(.footnote)
+                    .foregroundColor(Color.gray)
+                    .padding(.leading, 3)
             }
         }
     }
 
     func renderExpandedWithETAs() -> some View {
-        ForEach(getConnectedLines()) { line in
-            HStack {
-                Connection(line: line)
+        Group {
+            if stop.connectionIds.count > 0 {
+                ForEach(getConnectedLines()) { line in
+                    HStack {
+                        Connection(line: line)
 
-                if self.linesETAs![line.id] != nil {
-                    ForEach(0 ..< Int(ceil(Float(self.linesETAs![line.id]!.count) / Float(self.etasColumns))), id: \.self) { row in
-                        ForEach(0 ..< self.etasColumns, id: \.self) { column in
-                            self.renderETA(line, row, column)
+                        if self.linesETAs![line.id] != nil {
+                            ForEach(0 ..< Int(ceil(Float(self.linesETAs![line.id]!.count) / Float(self.etasColumns))), id: \.self) { row in
+                                ForEach(0 ..< self.etasColumns, id: \.self) { column in
+                                    self.renderETA(line, row, column)
+                                }
+                            }
+                        } else {
+                            Text("stops.noBuses")
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                                .padding(.leading, 3)
                         }
                     }
-                } else {
-                    Text("stops.noBuses")
-                        .font(.footnote)
-                        .foregroundColor(Color.gray)
-                        .padding(.leading, 3)
                 }
+            } else {
+                Text("stops.noLines")
+                    .font(.footnote)
+                    .foregroundColor(Color.gray)
+                    .padding(.leading, 3)
             }
         }
     }
