@@ -30,6 +30,7 @@ struct Stops: View {
                     }
                 }
             }
+            .id(UUID())
             Section(header: ListSectionHeader(text: "stops.history")) {
                 if appState.searchHistory.count == 0 {
                     VStack(alignment: .center) {
@@ -63,8 +64,8 @@ struct Stops: View {
         }
 
         .tabItem {
-           Image(systemName: "mappin").font(.system(size: 22))
-           Text("tabs.stops")
+            Image(systemName: "mappin").imageScale(.large)
+            Text("tabs.stops")
         }
     }
 }

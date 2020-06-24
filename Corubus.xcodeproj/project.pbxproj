@@ -29,7 +29,7 @@
 		64584481246F14F900D35337 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64584483246F14F900D35337 /* Localizable.strings */; };
 		647DA4152470D67900490764 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 647DA4142470D67900490764 /* SwiftyJSON */; };
 		647DA418247195FB00490764 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA417247195FB00490764 /* ActivityIndicator.swift */; };
-		647DA41A2471BD4500490764 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA4192471BD4500490764 /* LineItem.swift */; };
+		647DA41A2471BD4500490764 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA4192471BD4500490764 /* LineView.swift */; };
 		647DA41D2471C21900490764 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA41C2471C21900490764 /* Color.swift */; };
 		647DA41F2471CFB300490764 /* LineDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA41E2471CFB300490764 /* LineDetails.swift */; };
 		647DA4212471E60600490764 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DA4202471E60600490764 /* Stop.swift */; };
@@ -44,6 +44,7 @@
 		64A1420E24784DF700F07715 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420D24784DF700F07715 /* GeometryGetter.swift */; };
 		64A142102478519800F07715 /* JourneyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1420F2478519800F07715 /* JourneyGraph.swift */; };
 		64A142122478905800F07715 /* NetworkBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A142112478905800F07715 /* NetworkBroker.swift */; };
+		64DAC64D24A389A800637329 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DAC64C24A389A800637329 /* HomeKit.framework */; };
 		64DEEABC2496DC300010079B /* ListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DEEABB2496DC300010079B /* ListSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +94,7 @@
 		64584482246F14F900D35337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64584484246F151600D35337 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		647DA417247195FB00490764 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		647DA4192471BD4500490764 /* LineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		647DA4192471BD4500490764 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		647DA41C2471C21900490764 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		647DA41E2471CFB300490764 /* LineDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetails.swift; sourceTree = "<group>"; };
 		647DA4202471E60600490764 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		64A1420D24784DF700F07715 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		64A1420F2478519800F07715 /* JourneyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyGraph.swift; sourceTree = "<group>"; };
 		64A142112478905800F07715 /* NetworkBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBroker.swift; sourceTree = "<group>"; };
+		64DAC64C24A389A800637329 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		64DEEABB2496DC300010079B /* ListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DAC64D24A389A800637329 /* HomeKit.framework in Frameworks */,
 				647DA4152470D67900490764 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +165,7 @@
 				64584461246F0FFF00D35337 /* CorubusTests */,
 				6458446C246F0FFF00D35337 /* CorubusUITests */,
 				64584446246F0FF900D35337 /* Products */,
+				64DAC64B24A389A800637329 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,7 +244,7 @@
 			children = (
 				6419DFC52475CB9500567755 /* Blur.swift */,
 				647DA417247195FB00490764 /* ActivityIndicator.swift */,
-				647DA4192471BD4500490764 /* LineItem.swift */,
+				647DA4192471BD4500490764 /* LineView.swift */,
 				6419DFC02475A6B400567755 /* SearchBar.swift */,
 				6419DFCF2475DF0900567755 /* DirectionSelector.swift */,
 				6419DFD12475E01600567755 /* LineNumber.swift */,
@@ -265,6 +269,14 @@
 				64994BFD2481F3AD00AEEB5D /* LocationManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		64DAC64B24A389A800637329 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64DAC64C24A389A800637329 /* HomeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +440,7 @@
 				64A1420E24784DF700F07715 /* GeometryGetter.swift in Sources */,
 				64994C0A2482B39C00AEEB5D /* StopView.swift in Sources */,
 				647DA4212471E60600490764 /* Stop.swift in Sources */,
-				647DA41A2471BD4500490764 /* LineItem.swift in Sources */,
+				647DA41A2471BD4500490764 /* LineView.swift in Sources */,
 				6419DFC32475A77600567755 /* ViewControllerResolver.swift in Sources */,
 				6458444B246F0FF900D35337 /* SceneDelegate.swift in Sources */,
 				64994C0624829D9600AEEB5D /* ActivateLocation.swift in Sources */,
@@ -621,7 +633,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"Corubus/Preview Content\"";
 				DEVELOPMENT_TEAM = B3N379M8FS;
 				ENABLE_PREVIEWS = YES;
@@ -632,6 +647,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.martinhermida.corubus-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -641,7 +657,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"Corubus/Preview Content\"";
 				DEVELOPMENT_TEAM = B3N379M8FS;
 				ENABLE_PREVIEWS = YES;
@@ -652,6 +671,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.martinhermida.corubus-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

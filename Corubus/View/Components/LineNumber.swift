@@ -12,6 +12,6 @@ struct LineNumber: View {
                 .foregroundColor(Color.white)
         }
         .frame(width: 40, height: 40, alignment: .center)
-        .cornerRadius(5)
+        .cornerRadius(7.5)
     }
 }

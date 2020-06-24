@@ -10,14 +10,14 @@ struct Lines: View {
                     ActivityIndicator(style: .large)
                 } else {
                     List(self.appState.orderedLines) { line in
-                        LineItem(line: line)
+                        LineView(line: line)
                     }
                 }
             }
             .navigationBarTitle("tabs.lines")
         }
         .tabItem {
-            Image(systemName: "tram.fill").font(.system(size: 19))
+            Image(systemName: "tram.fill").imageScale(.large)
             Text("tabs.lines")
         }
     }

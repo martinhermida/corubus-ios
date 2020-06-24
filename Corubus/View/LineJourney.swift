@@ -28,8 +28,10 @@ struct LineJourney: View {
     var body: some View {
         let stops = returnJourney ? line.returnJourneyStopIds : line.outwardsJourneyStopIds
 
-        return List(Array(stops.enumerated()), id: \.element) { index, element in
-            self.renderStopItem(stopId: element, isFirst: index == 0, isLast: index == stops.count - 1, index: index)
-        }
+        return (
+            List(Array(stops.enumerated()), id: \.element) { index, element in
+                self.renderStopItem(stopId: element, isFirst: index == 0, isLast: index == stops.count - 1, index: index)
+            }
+        )
     }
 }

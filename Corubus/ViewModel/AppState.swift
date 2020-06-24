@@ -9,14 +9,18 @@ struct AppStateCore: Codable {
     var lines: [Int: Line]
     var orderedLines: [Line]
     var searchHistory: [Int]
+    var favoriteStops: [Int]
+    var favoriteLines: [Int]
 }
 
 class AppState: ObservableObject {
     @Published var linesLoading = false
-    @Published var stops: [Int: Stop] = [:]
-    @Published var lines: [Int: Line] = [:]
-    @Published var orderedLines: [Line] = []
-    @Published var searchHistory: [Int] = []
+    @Published var stops = [Int: Stop]()
+    @Published var lines = [Int: Line]()
+    @Published var orderedLines = [Line]()
+    @Published var searchHistory = [Int]()
+    @Published var favoriteStops = [Int]()
+    @Published var favoriteLines = [Int]()
     
     init() {
         self.load()
@@ -37,11 +41,13 @@ class AppState: ObservableObject {
         self.lines = appState.lines
         self.orderedLines = appState.orderedLines
         self.searchHistory = appState.searchHistory
+        self.favoriteStops = appState.favoriteStops
+        self.favoriteLines = appState.favoriteLines
         self.linesLoading = false
     }
     
     public func save() {
-        let core = AppStateCore(linesLoading: self.linesLoading, stops: self.stops, lines: self.lines, orderedLines: self.orderedLines, searchHistory: self.searchHistory)
+        let core = AppStateCore(linesLoading: self.linesLoading, stops: self.stops, lines: self.lines, orderedLines: self.orderedLines, searchHistory: self.searchHistory, favoriteStops: self.favoriteStops, favoriteLines: self.favoriteLines)
         guard let encoded = try? JSONEncoder().encode(core) else { return }
         
         let saveDir = AppState.getSaveDir()

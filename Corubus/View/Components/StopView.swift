@@ -66,6 +66,25 @@ struct StopView: View {
                     }
                 }
             }
+            .contextMenu {
+                if appState.favoriteStops.contains(stop.id) {
+                    Button(action: {
+                        self.appState.favoriteStops.removeAll(where: { $0 == self.stop.id })
+                        self.appState.save()
+                    }) {
+                        Text("favorites.remove")
+                        Image(systemName: "star")
+                    }
+                } else {
+                    Button(action: {
+                        self.appState.favoriteStops.insert(self.stop.id, at: 0)
+                        self.appState.save()
+                    }) {
+                        Text("favorites.add")
+                        Image(systemName: "star.fill")
+                    }
+                }
+            }
         }
         .padding(.vertical, 6)
         .onAppear {
