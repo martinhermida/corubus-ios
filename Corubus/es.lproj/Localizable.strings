@@ -7,7 +7,9 @@
 "stops.nearbySettings" = "Comprueba los permisos de ubicación en la aplicación Ajustes.";
 "stops.history" = "Buscadas recientemente";
 "stops.historyPlaceholder" = "Las paradas que busques irán apareciendo aquí.";
+"stops.removeFromHistory" = "Eliminar del historial";
 "stops.noBuses" = "No hay buses en camino";
+"stops.noLines" = "No hay líneas que paren aquí";
 "lineDetailsSection.journey" = "Recorrido";
 "lineDetailsSection.timetable" = "Horarios";
 "enableLocation" = "Activar ubicación";

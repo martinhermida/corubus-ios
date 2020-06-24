@@ -43,7 +43,7 @@ struct Stops: View {
                     .frame(maxWidth: .infinity, idealHeight: 115)
                 } else {
                     ForEach(appState.searchHistory, id: \.self) { id in
-                        StopView(stop: self.appState.stops[id]!, collapsed: .collapsed)
+                        StopView(stop: self.appState.stops[id]!, collapsed: .collapsed, removableFromHistory: true)
                     }
                 }
             }

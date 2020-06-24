@@ -7,6 +7,7 @@ struct StopView: View {
     var stop: Stop
     var collapsed: Collapse = .semiexpanded
     var addableToHistory = false
+    var removableFromHistory = false
     var autoFetch = false
     @State var currentCollapsed: Collapse?
     @State var linesETAs: [Int: [String]]?
@@ -82,6 +83,15 @@ struct StopView: View {
                     }) {
                         Text("favorites.add")
                         Image(systemName: "star.fill")
+                    }
+                }
+                if removableFromHistory {
+                    Button(action: {
+                        self.appState.searchHistory.removeAll(where: { $0 == self.stop.id })
+                        self.appState.save()
+                    }) {
+                        Text("stops.removeFromHistory")
+                        Image(systemName: "trash")
                     }
                 }
             }
