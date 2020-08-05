@@ -4,14 +4,11 @@ struct ActivateLocation: View {
     var requestAuthorization: () -> Void
 
     var body: some View {
-        Group {
+        VStack(spacing: 15) {
             Text("stops.nearbyPlaceholder")
                 .multilineTextAlignment(.center)
                 .font(.footnote)
-                .foregroundColor(Color.gray)
                 .padding(.horizontal, 15)
-
-            Spacer().frame(height: 15)
 
             Button(action: requestAuthorization) {
                 Text("enableLocation")

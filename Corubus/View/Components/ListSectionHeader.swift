@@ -4,9 +4,9 @@ struct ListSectionHeader: View {
     var text: String
 
     var body: some View {
-        Text(NSLocalizedString(text, comment: "").uppercased())
-            .font(.footnote)
-            .fontWeight(.bold)
-            .padding(.vertical, 10)
+        Text(NSLocalizedString(text, comment: ""))
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .foregroundColor(.black)
     }
 }

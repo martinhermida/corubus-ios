@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct LineDetails: View {
+    @EnvironmentObject var appState: AppState
     @State private var section = "journey"
     @State private var returnJourney = false
     @State private var busesData: [Set<Int>] = [[], []]
@@ -27,8 +28,32 @@ struct LineDetails: View {
 
             DirectionSelector(line: line, returnJourney: self.$returnJourney)
         }
-        .navigationBarItems(trailing: Header)
-        .navigationBarTitle("", displayMode: .inline)
+        .listStyle(PlainListStyle())
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Header
+            }
+            ToolbarItem(placement: .primaryAction) {
+                if appState.favoriteLines.contains(line.id) {
+                    Button(action: {
+                        self.appState.favoriteLines.removeAll(where: { $0 == self.line.id })
+                        self.appState.save()
+                    }) {
+                        Image(systemName: "star.fill")
+                    }
+                    .accessibility(hint: Text("favorites.remove"))
+                } else {
+                    Button(action: {
+                        self.appState.favoriteLines.insert(self.line.id, at: 0)
+                        self.appState.save()
+                    }) {
+                        Image(systemName: "star")
+                    }
+                    .accessibility(hint: Text("favorites.remove"))
+                }
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
             self.timer = self.line.pollBuses() { stopsWithBuses in
                 self.busesData = stopsWithBuses

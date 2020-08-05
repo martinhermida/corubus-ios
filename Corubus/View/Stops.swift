@@ -16,37 +16,42 @@ struct Stops: View {
         Group {
             Section(header: ListSectionHeader(text: "stops.nearby")) {
                 if locationManager.locationStatus != CLAuthorizationStatus.authorizedAlways && locationManager.locationStatus != CLAuthorizationStatus.authorizedWhenInUse {
-                    VStack(alignment: .center) {
+                    HStack(alignment: .center) {
+                        Spacer()
                         if locationManager.locationStatus == CLAuthorizationStatus.notDetermined {
                             ActivateLocation(requestAuthorization: self.locationManager.requestAuthorization)
                         } else {
                             LocationDenied()
                         }
+                        Spacer()
                     }
-                    .frame(maxWidth: .infinity, idealHeight: 115)
+                    .frame(height: 115)
                 } else {
                     ForEach(Stop.getClosestStops(appState.stops, locationManager.lastLocation)) { stop in
                         StopView(stop: stop, autoFetch: true)
                     }
                 }
             }
-            .id(UUID())
+            .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
             Section(header: ListSectionHeader(text: "stops.history")) {
                 if appState.searchHistory.count == 0 {
-                    VStack(alignment: .center) {
+                    HStack(alignment: .center) {
+                        Spacer()
                         Text("stops.historyPlaceholder")
                             .multilineTextAlignment(.center)
                             .font(.footnote)
                             .foregroundColor(Color.gray)
                             .padding(.horizontal, 15)
+                        Spacer()
                     }
-                    .frame(maxWidth: .infinity, idealHeight: 115)
+                    .frame(height: 115)
                 } else {
                     ForEach(appState.searchHistory, id: \.self) { id in
                         StopView(stop: self.appState.stops[id]!, collapsed: .collapsed, removableFromHistory: true)
                     }
                 }
             }
+            .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
         }
     }
 
@@ -59,10 +64,11 @@ struct Stops: View {
                     sectionList
                 }
             }
+            .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("tabs.stops")
             .add(searchBar)
         }
-
+        .navigationViewStyle(StackNavigationViewStyle())
         .tabItem {
             Image(systemName: "mappin").imageScale(.large)
             Text("tabs.stops")

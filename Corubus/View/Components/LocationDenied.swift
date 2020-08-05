@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LocationDenied: View {
     var body: some View {
-        Group {
+        VStack {
             Text("stops.nearbyPlaceholder")
                 .multilineTextAlignment(.center)
                 .font(.footnote)
@@ -11,6 +11,7 @@ struct LocationDenied: View {
             Text("stops.nearbySettings")
                 .multilineTextAlignment(.center)
                 .font(.footnote)
+                .foregroundColor(.gray)
                 .padding(.horizontal, 15)
         }
     }

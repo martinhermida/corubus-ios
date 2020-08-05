@@ -44,10 +44,10 @@ struct StopView: View {
 
     var body: some View {
         Button(action: onTap) {
-            HStack(alignment: .top, spacing: 15) {
+            HStack(alignment: .top, spacing: 10) {
                 Text(String(stop.id))
                     .fontWeight(.semibold)
-                    .frame(width: 40)
+                    .frame(width: 35)
 
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
@@ -62,7 +62,7 @@ struct StopView: View {
                     }
 
                     if (currentCollapsed ?? collapsed) != .collapsed {
-                        Connections(stop: stop, leftMargin: 70, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)
+                        Connections(stop: stop, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)
                             .padding(.bottom, 4)
                     }
                 }
@@ -96,7 +96,8 @@ struct StopView: View {
                 }
             }
         }
-        .padding(.vertical, 6)
+        .listRowInsets(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
+        .foregroundColor(.primary)
         .onAppear {
             if self.autoFetch && (self.currentCollapsed ?? self.collapsed) != .collapsed {
                 self.pollLinesETAs()

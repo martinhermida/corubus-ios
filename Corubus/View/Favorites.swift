@@ -14,6 +14,7 @@ struct Favorites: View {
                                     StopView(stop: self.appState.stops[$0]!, autoFetch: true)
                                 }
                             }
+                            .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
                         }
                         if appState.favoriteLines.count > 0 {
                             Section(header: ListSectionHeader(text: "tabs.lines")) {
@@ -21,8 +22,10 @@ struct Favorites: View {
                                     LineView(line: self.appState.lines[$0]!)
                                 }
                             }
+                            .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
                         }
                     }
+                    .listStyle(InsetGroupedListStyle())
                 } else {
                     VStack {
                         Image(systemName: "star")
@@ -46,6 +49,7 @@ struct Favorites: View {
             }
             .navigationBarTitle("tabs.favorites")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .tabItem {
             Image(systemName: "star.fill").imageScale(.large)
             Text("tabs.favorites")
