@@ -2,7 +2,7 @@ import Foundation
 import CoreData
 import SwiftyJSON
 
-class Line: Codable, Identifiable {
+class Line: Codable, Identifiable, Equatable {
     var id: Int
     var code: String
     var color: String
@@ -78,5 +78,9 @@ class Line: Codable, Identifiable {
         }
         timer.fire()
         return timer
+    }
+    
+    static func == (lhs: Line, rhs: Line) -> Bool {
+        return lhs.id == rhs.id
     }
 }

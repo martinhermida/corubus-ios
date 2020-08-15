@@ -62,11 +62,11 @@ struct Connections: View {
         Group {
             if stop.connectionIds.count > 0 {
                 ForEach(getConnectedLines()) { line in
-                    HStack(alignment: .top) {
+                    HStack(alignment: .center) {
                         Connection(line: line)
 
                         if self.linesETAs![line.id] != nil {
-                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 23))], alignment: .trailing) {
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 25))], alignment: .trailing) {
                                 ForEach(self.linesETAs![line.id]!, id: \.self) { time in
                                     Text(time + "'").font(.footnote)
                                 }
@@ -90,10 +90,13 @@ struct Connections: View {
     }
 
     func renderExpandedLoadingETAs() -> some View {
-        HStack {
+        let connectedLines = getConnectedLines()
+
+        return HStack {
             VStack(spacing: 0) {
-                ForEach(getConnectedLines()) { line in
+                ForEach(connectedLines) { line in
                     Connection(line: line)
+                        .padding(.vertical, line != connectedLines.last || connectedLines.count > 1 ? 1 : 0)
                 }
             }
 
@@ -121,7 +124,7 @@ struct Connections: View {
                 renderExpanded()
             } else {
                 renderCollapsed()
-                    .animation(.default)
+                    .animation(linesETAs != nil ? .default : .none)
                     .transition(.scale)
             }
         }
