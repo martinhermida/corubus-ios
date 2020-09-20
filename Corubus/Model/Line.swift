@@ -1,8 +1,9 @@
 import Foundation
 import CoreData
+import MapKit
 import SwiftyJSON
 
-class Line: Codable, Identifiable, Equatable {
+class Line: Codable, Identifiable, Equatable, ObservableObject {
     var id: Int
     var code: String
     var color: String
@@ -12,13 +13,17 @@ class Line: Codable, Identifiable, Equatable {
     var returnJourneyStopIds: [Int] = []
     
     init(json: JSON) {
-        self.id = json["id"].int!
-        self.code = json["lin_comer"].string!
-        self.color = json["color"].string!
-        self.lineStart = json["nombre_orig"].string!
-        self.lineEnd = json["nombre_dest"].string!
+        self.id = json["id"].intValue
+        self.code = json["lin_comer"].stringValue
+        self.color = json["color"].stringValue
+        self.lineStart = json["nombre_orig"].stringValue
+        self.lineEnd = json["nombre_dest"].stringValue
         self.outwardsJourneyStopIds = json["rutas"][0]["paradas"].arrayValue.map { $0.intValue }
         self.returnJourneyStopIds = json["rutas"][1]["paradas"].arrayValue.map { $0.intValue }
+    }
+    
+    static func == (lhs: Line, rhs: Line) -> Bool {
+        return lhs.id == rhs.id
     }
 
     static func transformTimes(_ rawTimes: [Int]) -> [String: [String]] {
@@ -41,6 +46,14 @@ class Line: Codable, Identifiable, Equatable {
         }
 
         return times
+    }
+    
+    static private func transformCoords(_ coordsString: String) -> MKPolyline {
+        let coordsPath = coordsString.split(separator: " ").map { pointString -> CLLocationCoordinate2D in
+            let point = pointString.split(separator: ",")
+            return CLLocationCoordinate2D(latitude: Double(point[1])!, longitude: Double(point[0])!)
+        }
+        return MKPolyline(coordinates: coordsPath, count: coordsPath.count)
     }
 
     func getTimetable(completionHandler: @escaping ([[String: [String]]]) -> Void) {
@@ -80,7 +93,13 @@ class Line: Codable, Identifiable, Equatable {
         return timer
     }
     
-    static func == (lhs: Line, rhs: Line) -> Bool {
-        return lhs.id == rhs.id
+    func getPath(completionHandler: @escaping ([MKPolyline]) -> Void) {
+        let url = "https://itranvias.com/queryitr_v3.php?&dato=\(self.id)&mostrar=R&func=99"
+        NetworkBroker.get(url) { json in
+            completionHandler([
+                Line.transformCoords(json["mapas"][0]["recorridos"][0]["recorrido"].stringValue),
+                Line.transformCoords(json["mapas"][0]["recorridos"][1]["recorrido"].stringValue)
+            ])
+        }
     }
 }

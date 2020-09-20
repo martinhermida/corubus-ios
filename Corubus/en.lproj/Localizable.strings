@@ -12,8 +12,11 @@
 "stops.noLines" = "No lines stop here";
 "lineDetailsSection.journey" = "Journey";
 "lineDetailsSection.timetable" = "Timetable";
+"lineDetailsSection.map" = "Map";
 "enableLocation" = "Enable location";
 "favorites.add" = "Add to favorites";
 "favorites.remove" = "Remove from favorites";
 "favorites.placeholder.title" = "You have no favorites yet.";
 "favorites.placeholder.body" = "You can add stops and lines to your favorites to access them quicker.\n\nStart by long-pressing on a stop or line.";
+"map.route.start" = "Start";
+"map.route.finish" = "Finish";

@@ -4,7 +4,7 @@ import SwiftyJSON
 class NetworkBroker {
     typealias CompletionHandlerType = (_ result: JSON) -> Void
     static private let CACHE_TTL = 29.0
-    static private let REQUEST_DELAY = 0.5
+    static private let REQUEST_DELAY = 1.0
 
     static private var cache = [String: CachedResponse]()
     static private var queue = [String]()

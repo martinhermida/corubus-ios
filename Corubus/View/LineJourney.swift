@@ -21,6 +21,7 @@ struct LineJourney: View {
                 Connections(stop: stop, expanded: false, linesETAs: nil)
                     .padding(.bottom, 4)
             }
+            .padding(.trailing)
         }
         .padding(.vertical, 4)
     }

@@ -12,8 +12,11 @@
 "stops.noLines" = "No hay líneas que paren aquí";
 "lineDetailsSection.journey" = "Recorrido";
 "lineDetailsSection.timetable" = "Horarios";
+"lineDetailsSection.map" = "Mapa";
 "enableLocation" = "Activar ubicación";
 "favorites.add" = "Añadir a favoritos";
 "favorites.remove" = "Eliminar de favoritos";
 "favorites.placeholder.title" = "Todavía no tienes favoritos.";
 "favorites.placeholder.body" = "Puedes añadir paradas y líneas a tus favoritos para acceder a ellas rápidamente.\n\nComienza manteniendo pulsada una parada o línea.";
+"map.route.start" = "Inicio";
+"map.route.finish" = "Fin";

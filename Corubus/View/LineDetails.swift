@@ -14,16 +14,23 @@ struct LineDetails: View {
         Picker(selection: self.$section, label: Text("")) {
             Text("lineDetailsSection.journey").tag("journey")
             Text("lineDetailsSection.timetable").tag("timetable")
+            Text("lineDetailsSection.map").tag("map")
         }
         .pickerStyle(SegmentedPickerStyle())
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            if section == "journey" {
+            switch section {
+            case "journey":
                 LineJourney(line: line, returnJourney: returnJourney, stopsWithBuses: busesData[returnJourney ? 1 : 0])
-            } else {
+            case "timetable":
                 LineTimetable(timetable: timetable[returnJourney ? 1 : 0])
+            case "map":
+                LineMap(returnJourney: returnJourney)
+                    .environmentObject(line)
+            default:
+                EmptyView()
             }
 
             DirectionSelector(line: line, returnJourney: self.$returnJourney)
