@@ -10,6 +10,7 @@
 "stops.removeFromHistory" = "Eliminar del historial";
 "stops.noBuses" = "No hay buses en camino";
 "stops.noLines" = "No hay líneas que paren aquí";
+"stop.ETAsTitle" = "Próximas llegadas";
 "lineDetailsSection.journey" = "Recorrido";
 "lineDetailsSection.timetable" = "Horarios";
 "lineDetailsSection.map" = "Mapa";

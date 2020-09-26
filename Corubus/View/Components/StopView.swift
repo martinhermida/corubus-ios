@@ -43,23 +43,16 @@ struct StopView: View {
     }
 
     var body: some View {
-        Button(action: onTap) {
+        NavigationLink(destination: StopDetails(stop: stop, linesETAs: linesETAs)) {
             HStack(alignment: .top, spacing: 10) {
                 Text(String(stop.id))
                     .fontWeight(.semibold)
                     .frame(width: 35)
 
                 VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Text(stop.name)
-                            .font(.subheadline)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Spacer()
-                        Image(systemName: "chevron.down")
-                            .font(Font.footnote.weight(.semibold))
-                            .foregroundColor(Color(UIColor.systemGray3))
-                            .rotationEffect(.degrees((currentCollapsed ?? collapsed) == Collapse.expanded ? -180 : 0))
-                    }
+                    Text(stop.name)
+                        .font(.subheadline)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     if (currentCollapsed ?? collapsed) != .collapsed {
                         Connections(stop: stop, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)

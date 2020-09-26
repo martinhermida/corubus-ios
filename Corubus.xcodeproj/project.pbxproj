@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B1215DF250C16F300F7B16A /* LineMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1215DE250C16F300F7B16A /* LineMap.swift */; };
 		5B1215E1250C192900F7B16A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1215E0250C192900F7B16A /* MapView.swift */; };
+		5B1C872F251EABFA00CBDFB5 /* StopDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C872E251EABFA00CBDFB5 /* StopDetails.swift */; };
 		6419DFC12475A6B400567755 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419DFC02475A6B400567755 /* SearchBar.swift */; };
 		6419DFC32475A77600567755 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419DFC22475A77600567755 /* ViewControllerResolver.swift */; };
 		6419DFC62475CB9500567755 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419DFC52475CB9500567755 /* Blur.swift */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		5B1215DE250C16F300F7B16A /* LineMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineMap.swift; sourceTree = "<group>"; };
 		5B1215E0250C192900F7B16A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5B1C872E251EABFA00CBDFB5 /* StopDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetails.swift; sourceTree = "<group>"; };
 		6416D67A24A7FF8B0057E234 /* Corubus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Corubus.entitlements; sourceTree = "<group>"; };
 		6419DFC02475A6B400567755 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		6419DFC22475A77600567755 /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				64994BF924818D2600AEEB5D /* LineTimetable.swift */,
 				64994BFB2481DE4F00AEEB5D /* Stops.swift */,
 				5B1215DE250C16F300F7B16A /* LineMap.swift */,
+				5B1C872E251EABFA00CBDFB5 /* StopDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				5B1215E1250C192900F7B16A /* MapView.swift in Sources */,
 				64A142102478519800F07715 /* JourneyGraph.swift in Sources */,
 				6419DFCE2475DE3500567755 /* LineJourney.swift in Sources */,
+				5B1C872F251EABFA00CBDFB5 /* StopDetails.swift in Sources */,
 				6419DFC62475CB9500567755 /* Blur.swift in Sources */,
 				6419DFC12475A6B400567755 /* SearchBar.swift in Sources */,
 				642BCFA2246F2E9D00B5AA79 /* AppState.swift in Sources */,

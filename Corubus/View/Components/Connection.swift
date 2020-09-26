@@ -79,6 +79,7 @@ struct Connections: View {
                                 .padding(.leading, 3)
                         }
                     }
+                    .padding(.vertical, 2)
                 }
             } else {
                 Text("stops.noLines")
@@ -96,7 +97,7 @@ struct Connections: View {
             VStack(spacing: 0) {
                 ForEach(connectedLines) { line in
                     Connection(line: line)
-                        .padding(.vertical, line != connectedLines.last || connectedLines.count > 1 ? 1 : 0)
+                        .padding(.vertical, 2)
                 }
             }
 
@@ -107,7 +108,7 @@ struct Connections: View {
             }
         }
     }
-
+ 
     func renderExpanded() -> some View {
         Group {
             if self.linesETAs == nil {
