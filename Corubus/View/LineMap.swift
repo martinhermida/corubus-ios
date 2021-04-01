@@ -3,13 +3,13 @@ import MapKit
 
 struct LineMap: View {
     let returnJourney: Bool
+    let line: Line
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var line: Line
     @State var routes = [MKPolyline?](repeating: nil, count: 2)
 
     var body: some View {
         ZStack {
-            MapView(route: $routes[returnJourney ? 1 : 0])
+            MapView(line: line, route: routes[returnJourney ? 1 : 0])
                 .blur(radius: routes[0] == nil ? CGFloat(7) : CGFloat(0))
                 .animation(.default)
                 .edgesIgnoringSafeArea(.all)

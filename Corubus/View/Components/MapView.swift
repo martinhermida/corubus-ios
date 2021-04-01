@@ -2,9 +2,11 @@ import SwiftUI
 import MapKit
 
 struct MapView: UIViewRepresentable {
-    @EnvironmentObject var line: Line
-    @Binding var route: MKPolyline?
+    var line: Line?
+    var route: MKPolyline?
+    var stop: Stop?
 
+    
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView(frame: .zero)
         mapView.setVisibleMapRect(
@@ -19,6 +21,7 @@ struct MapView: UIViewRepresentable {
         view.delegate = mapViewDelegate                          // (1) This should be set in makeUIView, but it is getting reset to `nil`
         view.translatesAutoresizingMaskIntoConstraints = false   // (2) In the absence of this, we get constraints error on rotation; and again, it seems one should do this in makeUIView, but has to be here
         addRoute(to: view)
+        addStop(to: view)
     }
 }
 
@@ -63,19 +66,37 @@ private extension MapView {
         
         view.setVisibleMapRect(getBoundingRect(view), edgePadding: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15), animated: true)
     }
+    
+    func addStop(to view: MKMapView) {
+        guard let stop = stop else { return }
+        
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: stop.latitude, longitude: stop.longitude),
+            span: MKCoordinateSpan(latitudeDelta: 0.0015, longitudeDelta: 0.0015)
+        )
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = region.center
+
+        view.setRegion(region, animated: false)
+        view.addAnnotation(pin)
+        view.mapType = .hybrid
+    }
 }
 
 class MapViewDelegate: NSObject, MKMapViewDelegate {
-    var line: Line
+    var line: Line?
 
-    init(_ line: Line) {
+    init(_ line: Line?) {
         self.line = line
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.lineWidth = 8
-        renderer.strokeColor = UIColor(hex: line.color)!.withAlphaComponent(1)
+        if self.line != nil {
+            renderer.lineWidth = 8
+            renderer.strokeColor = UIColor(hex: self.line!.color)!.withAlphaComponent(1)
+        }
         return renderer
     }
 }

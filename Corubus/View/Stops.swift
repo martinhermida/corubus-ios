@@ -33,6 +33,8 @@ struct Stops: View {
                 }
             }
             .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
+            .textCase(.none)
+
             Section(header: ListSectionHeader(text: "stops.history")) {
                 if appState.searchHistory.count == 0 {
                     HStack(alignment: .center) {
@@ -52,6 +54,7 @@ struct Stops: View {
                 }
             }
             .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
+            .textCase(.none)
         }
     }
 

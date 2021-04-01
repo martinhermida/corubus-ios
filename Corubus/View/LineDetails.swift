@@ -27,8 +27,7 @@ struct LineDetails: View {
             case "timetable":
                 LineTimetable(timetable: timetable[returnJourney ? 1 : 0])
             case "map":
-                LineMap(returnJourney: returnJourney)
-                    .environmentObject(line)
+                LineMap(returnJourney: returnJourney, line: line)
             default:
                 EmptyView()
             }

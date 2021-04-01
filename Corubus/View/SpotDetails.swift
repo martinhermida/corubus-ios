@@ -26,7 +26,6 @@ struct StopDetails: View {
                         Connections(stop: stop, expanded: true, linesETAs: linesETAs)
                             .padding(.vertical, 7)
                     }
-                    //.padding(.bottom, -10)
                 }
                 .listStyle(InsetGroupedListStyle())
                 .frame(width: g.size.width, height: g.size.height - 130, alignment: .center)

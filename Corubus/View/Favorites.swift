@@ -15,6 +15,7 @@ struct Favorites: View {
                                 }
                             }
                             .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
+                            .textCase(.none)
                         }
                         if appState.favoriteLines.count > 0 {
                             Section(header: ListSectionHeader(text: "tabs.lines")) {
@@ -23,6 +24,7 @@ struct Favorites: View {
                                 }
                             }
                             .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 15))
+                            .textCase(.none)
                         }
                     }
                     .listStyle(InsetGroupedListStyle())
