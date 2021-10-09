@@ -18,7 +18,7 @@ struct LineJourney: View {
                 Text(stop.name)
                     .font(.subheadline)
                     .fixedSize(horizontal: false, vertical: true)
-                Connections(stop: stop, expanded: false, linesETAs: nil)
+                Connections(stop: stop, linesETAs: nil)
                     .padding(.bottom, 4)
             }
             .padding(.trailing)

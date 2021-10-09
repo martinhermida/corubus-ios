@@ -14,13 +14,11 @@ struct Connection: View {
         }
         .frame(width: 30, height: 18)
         .cornerRadius(3)
-        .padding(3)
     }
 }
 
 struct Connections: View {
     var stop: Stop
-    var expanded: Bool
     var linesETAs: [Int: [String]]?
     @EnvironmentObject var appState: AppState
 
@@ -33,6 +31,7 @@ struct Connections: View {
 
         return HStack(spacing: 3) {
             Connection(line: line)
+                .padding(3)
 
             if self.linesETAs != nil && self.linesETAs![line.id] != nil {
                 Text(self.linesETAs![line.id]![0] + "'")
@@ -58,76 +57,11 @@ struct Connections: View {
         }
     }
 
-    func renderExpandedWithETAs() -> some View {
-        Group {
-            if stop.connectionIds.count > 0 {
-                ForEach(getConnectedLines()) { line in
-                    HStack(alignment: .center) {
-                        Connection(line: line)
-
-                        if self.linesETAs![line.id] != nil {
-                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 25))], alignment: .trailing) {
-                                ForEach(self.linesETAs![line.id]!, id: \.self) { time in
-                                    Text(time + "'").font(.footnote)
-                                }
-                            }
-                            .padding(.vertical, 5)
-                        } else {
-                            Text("stops.noBuses")
-                                .font(.footnote)
-                                .foregroundColor(Color.gray)
-                                .padding(.leading, 3)
-                        }
-                    }
-                    .padding(.vertical, 2)
-                }
-            } else {
-                Text("stops.noLines")
-                    .font(.footnote)
-                    .foregroundColor(Color.gray)
-                    .padding(.leading, 3)
-            }
-        }
-    }
-
-    func renderExpandedLoadingETAs() -> some View {
-        let connectedLines = getConnectedLines()
-
-        return HStack {
-            VStack(spacing: 0) {
-                ForEach(connectedLines) { line in
-                    Connection(line: line)
-                        .padding(.vertical, 2)
-                }
-            }
-
-            HStack(alignment: .center) {
-                Spacer()
-                ActivityIndicator(style: .medium)
-                Spacer()
-            }
-        }
-    }
- 
-    func renderExpanded() -> some View {
-        Group {
-            if self.linesETAs == nil {
-                renderExpandedLoadingETAs()
-            } else {
-                renderExpandedWithETAs()
-            }
-        }
-    }
-
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            if expanded {
-                renderExpanded()
-            } else {
-                renderCollapsed()
-                    .animation(linesETAs != nil ? .default : .none)
-                    .transition(.scale)
-            }
+            renderCollapsed()
+                .animation(linesETAs != nil ? .default : .none)
+                .transition(.scale)
         }
         .padding(-3)
     }

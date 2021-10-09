@@ -7,7 +7,8 @@ struct ListSectionHeader: View {
         Text(NSLocalizedString(text, comment: ""))
             .font(.title3)
             .fontWeight(.semibold)
-            .foregroundColor(.black)
+            .textCase(.none)
+            .foregroundColor(.primary)
     }
 }
 

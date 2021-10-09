@@ -19,7 +19,7 @@ struct LineMap: View {
                 }
             
             if routes[0] == nil {
-                ActivityIndicator(style: .large, color: colorScheme == .light ? UIColor.gray : nil)
+                ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     .background(colorScheme == .dark ? Color.black.opacity(0.2) : Color.white.opacity(0.4))
                     .transition(AnyTransition.opacity.animation(.easeOut(duration: 0.2)))

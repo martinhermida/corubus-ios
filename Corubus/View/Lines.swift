@@ -7,7 +7,7 @@ struct Lines: View {
         NavigationView {
             Group {
                 if self.appState.orderedLines.count == 0 && appState.linesLoading {
-                    ActivityIndicator(style: .large)
+                    ProgressView()
                 } else {
                     List(self.appState.orderedLines) { line in
                         LineView(line: line)

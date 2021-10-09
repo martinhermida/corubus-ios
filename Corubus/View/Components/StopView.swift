@@ -1,15 +1,13 @@
 import SwiftUI
 
 struct StopView: View {
-    enum Collapse { case collapsed, expanded, semiexpanded }
-
     @EnvironmentObject var appState: AppState
     var stop: Stop
-    var collapsed: Collapse = .semiexpanded
+    var collapsed = false
     var addableToHistory = false
     var removableFromHistory = false
     var autoFetch = false
-    @State var currentCollapsed: Collapse?
+    @State var currentCollapsed: Bool?
     @State var linesETAs: [Int: [String]]?
     @State private var timer: Timer?
 
@@ -26,24 +24,10 @@ struct StopView: View {
             appState.searchHistory = searchHistory
             appState.save()
         }
-
-        if (currentCollapsed == Collapse.expanded) {
-            self.currentCollapsed = collapsed
-            if collapsed == Collapse.collapsed {
-                self.timer?.invalidate()
-                self.timer = nil
-                self.linesETAs = nil
-            }
-        } else {
-            self.currentCollapsed = Collapse.expanded
-            if self.timer == nil {
-                self.pollLinesETAs()
-            }
-        }
     }
 
     var body: some View {
-        NavigationLink(destination: StopDetails(stop: stop, linesETAs: linesETAs)) {
+        NavigationLink(destination: StopDetails(stop: stop)) {
             HStack(alignment: .top, spacing: 10) {
                 Text(String(stop.id))
                     .fontWeight(.semibold)
@@ -54,8 +38,8 @@ struct StopView: View {
                         .font(.subheadline)
                         .fixedSize(horizontal: false, vertical: true)
 
-                    if (currentCollapsed ?? collapsed) != .collapsed {
-                        Connections(stop: stop, expanded: (currentCollapsed ?? collapsed) == .expanded, linesETAs: linesETAs)
+                    if (currentCollapsed ?? collapsed) == false {
+                        Connections(stop: stop, linesETAs: linesETAs)
                             .padding(.bottom, 4)
                     }
                 }
@@ -92,7 +76,7 @@ struct StopView: View {
         .listRowInsets(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
         .foregroundColor(.primary)
         .onAppear {
-            if self.autoFetch && (self.currentCollapsed ?? self.collapsed) != .collapsed {
+            if self.autoFetch {
                 self.pollLinesETAs()
             }
         }
