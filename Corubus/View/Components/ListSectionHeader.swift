@@ -5,7 +5,7 @@ struct ListSectionHeader: View {
 
     var body: some View {
         Text(NSLocalizedString(text, comment: ""))
-            .font(.headline)
+            .font(.title3)
             .fontWeight(.semibold)
             .foregroundColor(.black)
     }

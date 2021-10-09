@@ -17,50 +17,44 @@ struct StopDetails: View {
         }
     }
     
+    func openMap() {
+        let mapItem = MKMapItem(
+            placemark: MKPlacemark(
+                coordinate: CLLocationCoordinate2D(latitude: stop.latitude, longitude: stop.longitude)
+            )
+        )
+        mapItem.name = stop.name
+        mapItem.openInMaps()
+    }
+    
     var body: some View {
-        GeometryReader { g in
-            ScrollView {
-                HStack(alignment: .top, spacing: 15) {
-                    Text(String(stop.id))
-                        .font(Font.title2.bold())
-                        .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 5, leading: 7, bottom: 5, trailing: 7))
-                        .background(Color.black)
-                        .cornerRadius(5)
-                        .padding(.top, -2)
-                    Text(stop.name)
-                        .font(Font.title.bold())
-                        .multilineTextAlignment(.leading)
-                    Spacer()
-                }
-                .padding(EdgeInsets(top: 30, leading: 25, bottom: 15, trailing: 15))
-                
-                List {
-                    Section(header: ListSectionHeader(text: "stop.ETAsTitle")) {
-                        Connections(stop: stop, expanded: true, linesETAs: linesETAs)
-                            .padding(.vertical, 7)
-                    }
-                    .textCase(.none)
-
-                    MapView(stop: stop)
-                        .frame(height: 200, alignment: .center)
-                        .padding(EdgeInsets(top: -10, leading: -20, bottom: -10, trailing: -20))
-                        .onTapGesture {
-                            let mapItem = MKMapItem(
-                                placemark: MKPlacemark(
-                                    coordinate: CLLocationCoordinate2D(latitude: stop.latitude, longitude: stop.longitude)
-                                )
-                            )
-                            mapItem.name = stop.name
-                            mapItem.openInMaps()
-                        }
-                }
-                .listStyle(InsetGroupedListStyle())
-                .frame(height: g.size.height - 130, alignment: .center)
+        List {
+            Section(header:
+                Text(stop.name)
+                    .font(Font.title.bold())
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.leading)
+                    .textCase(nil)
+                    .padding(.top, 5)
+                    
+            ) {
+                EmptyView()
             }
-            .background(Color(UIColor.systemGray6))
-            .navigationBarTitle(String(stop.id), displayMode: .inline)
+            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            
+            Section(header: ListSectionHeader(text: "stop.ETAsTitle")) {
+                Connections(stop: stop, expanded: true, linesETAs: linesETAs)
+                    .padding(.vertical, 7)
+            }
+            .textCase(.none)
+
+            MapView(stop: stop)
+                .frame(height: 200, alignment: .center)
+                .padding(EdgeInsets(top: -10, leading: -20, bottom: -10, trailing: -20))
+                .onTapGesture(perform: openMap)
         }
+        .listStyle(InsetGroupedListStyle())
+        .navigationBarTitle(String(stop.id), displayMode: .inline)
         .onAppear {
             self.pollLinesETAs()
         }
