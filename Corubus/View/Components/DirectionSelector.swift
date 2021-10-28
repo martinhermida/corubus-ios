@@ -10,8 +10,6 @@ struct DirectionSelector: View {
 
     var body: some View {
         ZStack {
-            Blur(style: .systemChromeMaterial)
-                .edgesIgnoringSafeArea(.horizontal)
             VStack {
                 Divider()
                     .edgesIgnoringSafeArea(.horizontal)
@@ -43,5 +41,6 @@ struct DirectionSelector: View {
             }
         }
         .frame(height: 60)
+        .background(.ultraThickMaterial)
     }
 }

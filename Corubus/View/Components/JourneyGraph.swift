@@ -15,9 +15,9 @@ struct JourneyGraph: View {
                 .frame(width: 4)
                 .cornerRadius(2)
                 .padding(EdgeInsets(
-                    top: isFirst ? rect.height / 2 : -12,
-                    leading: -6,
-                    bottom: isLast ? rect.height / 2 : -12,
+                    top: isFirst ? rect.height / 2 : -14,
+                    leading: 0,
+                    bottom: isLast ? rect.height / 2 : -14,
                     trailing: 0
                 ))
                 .animation(.none)
@@ -27,7 +27,7 @@ struct JourneyGraph: View {
                     .overlay(Circle().stroke(Color(hex: line.color), lineWidth: 4))
                     .foregroundColor(.white)
                     .frame(width: 23, height: 23, alignment: .center)
-                    .padding(.leading, -8)
+                    .padding(.leading, 0)
                     .transition(.scale)
             }
 

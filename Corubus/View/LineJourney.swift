@@ -30,8 +30,18 @@ struct LineJourney: View {
         let stops = returnJourney ? line.returnJourneyStopIds : line.outwardsJourneyStopIds
 
         return (
-            List(Array(stops.enumerated()), id: \.element) { index, element in
-                self.renderStopItem(stopId: element, isFirst: index == 0, isLast: index == stops.count - 1, index: index)
+            ScrollView {
+                ForEach(Array(stops.enumerated()), id: \.element) { index, element in
+                    VStack {
+                        self.renderStopItem(stopId: element, isFirst: index == 0, isLast: index == stops.count - 1, index: index)
+                        
+                        if index != stops.count - 1 {
+                            Divider()
+                                .padding(.leading, 55)
+                        }
+                    }
+                    .padding(.leading, 10)
+                }
             }
         )
     }
