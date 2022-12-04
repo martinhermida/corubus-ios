@@ -83,5 +83,8 @@ struct StopView: View {
         .onDisappear {
             self.timer?.invalidate()
         }
+        .onTapGesture {
+            self.onTap()
+        }
     }
 }
