@@ -3,11 +3,11 @@ import CoreLocation
 
 struct Stops: View {
     @EnvironmentObject var appState: AppState
-    @ObservedObject var searchBar = SearchBar()
     @ObservedObject var locationManager = LocationManager()
+    @State var search = ""
 
     var searchList: some View {
-        ForEach(Stop.searchStops(searchBar.text, appState.stops)) { stop in
+        ForEach(Stop.searchStops(search, appState.stops)) { stop in
             StopView(stop: stop, addableToHistory: true)
         }
     }
@@ -61,7 +61,7 @@ struct Stops: View {
     var body: some View {
         NavigationView {
             List {
-                if searchBar.searchController.isActive {
+                if !search.isEmpty {
                     searchList
                 } else {
                     sectionList
@@ -69,7 +69,8 @@ struct Stops: View {
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("tabs.stops")
-            .add(searchBar)
+            .searchable(text: $search)
+            .disableAutocorrection(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .tabItem {
