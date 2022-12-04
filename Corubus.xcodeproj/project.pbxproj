@@ -10,6 +10,7 @@
 		5B1215DF250C16F300F7B16A /* LineMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1215DE250C16F300F7B16A /* LineMap.swift */; };
 		5B1215E1250C192900F7B16A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1215E0250C192900F7B16A /* MapView.swift */; };
 		5B1C872F251EABFA00CBDFB5 /* StopDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C872E251EABFA00CBDFB5 /* StopDetails.swift */; };
+		5B938D27293CC34D0038DB76 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 5B938D26293CC34D0038DB76 /* Sentry */; };
 		5B9BC0832711F8CA00C530AB /* ConnectionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BC0822711F8CA00C530AB /* ConnectionsList.swift */; };
 		6419DFC12475A6B400567755 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419DFC02475A6B400567755 /* SearchBar.swift */; };
 		6419DFC32475A77600567755 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419DFC22475A77600567755 /* ViewControllerResolver.swift */; };
@@ -126,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				647DA4152470D67900490764 /* SwiftyJSON in Frameworks */,
+				5B938D27293CC34D0038DB76 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +308,7 @@
 			name = Corubus;
 			packageProductDependencies = (
 				647DA4142470D67900490764 /* SwiftyJSON */,
+				5B938D26293CC34D0038DB76 /* Sentry */,
 			);
 			productName = Corubus;
 			productReference = 64584445246F0FF900D35337 /* Corubus.app */;
@@ -382,6 +385,7 @@
 			mainGroup = 6458443C246F0FF900D35337;
 			packageReferences = (
 				647DA4132470D67900490764 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				5B938D25293CC34D0038DB76 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 64584446246F0FF900D35337 /* Products */;
 			projectDirPath = "";
@@ -819,6 +823,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5B938D25293CC34D0038DB76 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		647DA4132470D67900490764 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -830,6 +842,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5B938D26293CC34D0038DB76 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B938D25293CC34D0038DB76 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
 		647DA4142470D67900490764 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 647DA4132470D67900490764 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;

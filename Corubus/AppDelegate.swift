@@ -1,12 +1,5 @@
-//
-//  AppDelegate.swift
-//  Corubus
-//
-//  Created by Martín Hermida on 15/05/2020.
-//  Copyright © 2020 Martín Hermida. All rights reserved.
-//
-
 import UIKit
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +7,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let sentryDsn = Bundle.main.object(forInfoDictionaryKey: "SENTRY_DSN")
         
+        if let sentryDsn {
+            SentrySDK.start { options in
+                options.dsn = sentryDsn as? String
+                
+                #if DEBUG
+                options.enabled = false
+                #endif
+
+                options.enableAppHangTracking = true
+                options.enableCaptureFailedRequests = true
+                options.enableUserInteractionTracing = true
+                options.enableAutoPerformanceTracking = true
+                options.tracesSampleRate = 1.0
+            }
+        }
+
         return true
     }
 
